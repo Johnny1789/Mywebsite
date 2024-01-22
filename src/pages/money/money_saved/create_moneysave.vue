@@ -38,7 +38,7 @@ const clearForm = () => {
   <a-drawer
     :open="open"
     @close="onCancel"
-    title="ເພີ່ມຜູ້ໃຊ້"
+    title="ຂໍເງີນແຮ"
     cancel-text="ຍົກເລີກ"
     ok-text="ບັນທຶກ"
   >
@@ -47,81 +47,24 @@ const clearForm = () => {
       <a-button class="bg-blue-500" @click="save()">Save</a-button>
     </template>
     <a-form layout="vertical">
-      <a-form-item name="type" label="ໝວດໝູ່">
+      <a-form-item name="type" label="ປະເພດເງີນແຮ">
         <a-select
             :dropdown-match-select-width="false"
-            placeholder="ປະເພດເຄື່ອງດື່ມ"
+            placeholder="ເລືອກປະເພດເງີນແຮ"
           >
-            <a-select-option value="all">ນ້ຳອັດລົມ</a-select-option>
-            <a-select-option value="reading">ເບຍ</a-select-option>
-            <a-select-option value="paid">ນ້ຳ</a-select-option>
+            <a-select-option value="all">ເງີນແຮ</a-select-option>
             
           </a-select>
       </a-form-item>
-      <a-form-item name="name" label="ຊື່">
+      <a-form-item name="title" label="ຫົວຂໍ້">
         <a-input type="text" autocomplete="off" />
       </a-form-item>
-      <div class="flex flex-1 gap-3">
-        <a-form-item name="price_buy" label="ລາຄາຊື້">
-          <a-input type="text" />
-        </a-form-item>
-        <a-form-item name="password" label="ລາຂາຂາຍ">
-          <a-input type="price_sale" />
-        </a-form-item>
-      </div>
-      <div class="flex flex-1 gap-3">
-        <a-form-item name="unit_buy" label="ຫົວໜ່ວຍຊື້">
-          <a-select
-            :dropdown-match-select-width="false"
-            placeholder="ເລືອກຫົວໜ່ວຍຊື້"
-          >
-            <a-select-option value="all">ປ໋ອງ</a-select-option>
-            <a-select-option value="reading">ຕຸກ</a-select-option>
-            <a-select-option value="paid">ລັງ</a-select-option>
-            
-          </a-select>
-        </a-form-item>
-        <a-form-item name="unit_sale" label="ຫົວໜ່ວຍຂາຍ">
-          <a-select
-            :dropdown-match-select-width="false"
-            placeholder="ເລືອກຫົວໜ່ວຍຊື້"
-          >
-            <a-select-option value="all">ປ໋ອງ</a-select-option>
-            <a-select-option value="reading">ຕຸກ</a-select-option>
-            <a-select-option value="paid">ລັງ</a-select-option>
-            
-          </a-select>
-        </a-form-item>
-      </div>
-      <div class="flex flex-1 gap-3">
-        <a-form-item name="quality/unitbuy" label="ຈຳນວນ/ຫົວໜ່ວຍຊື້">
-          <a-input type="text" autocomplete="off" />
-        </a-form-item>
-        <a-form-item label="ຮູບພາບເມນູ">
-          <a-upload action="/upload.do" list-type="picture-card">
-            <div>
-              <PlusOutlined />
-              <div style="margin-top: 8px">Upload</div>
-            </div>
-          </a-upload>
-        </a-form-item>
-      </div>
-      <div class="flex flex-1  gap-10">
-        <a-form-item label="ສີນຄ້າແນະນຳ" name="is_enable">
-          <a-switch
-            checked-children="ປິດ"
-            un-checked-children="ເປີດ"
-            class="bg-blue-500"
-          />
-        </a-form-item>
-        <a-form-item label="ສີນຄ້າຂາຍດີ" name="is_enable">
-          <a-switch
-            checked-children="ປິດ"
-            un-checked-children="ເປີດ"
-            class="bg-blue-500"
-          />
-        </a-form-item>
-      </div>
+      <a-form-item name="detail" label="ລາຍລະອຽດ">
+        <a-textarea />
+      </a-form-item>
+      <a-form-item name="quality" label="ຈຳນວນເງີນ">
+        <a-input type="text" autocomplete="off" placeholder="0"  />
+      </a-form-item>
     
     </a-form>
   </a-drawer>

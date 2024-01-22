@@ -25,6 +25,7 @@ declare module 'vue' {
     ATable: typeof import('ant-design-vue/es')['Table']
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
+    ATextarea: typeof import('ant-design-vue/es')['Textarea']
     AUpload: typeof import('ant-design-vue/es')['Upload']
     Bar_cart: typeof import('./src/components/bar_cart.vue')['default']
     Content: typeof import('./src/components/content.vue')['default']

@@ -1,5 +1,21 @@
 <script setup lang="ts">
 import manage_typetable from './manage_typetable';
+import { ref } from "vue";
+import create_managetype from './create_managetype.vue';
+const isShowModalForm = ref(false);
+
+const Add = () => {
+  isShowModalForm.value = true;
+};
+
+const onCancel = () => {
+  /*  console.log(data); */
+  isShowModalForm.value = false;
+};
+
+const reloadPage = () => {
+  location.reload();
+};
 </script>
 <template>
      <a-space
@@ -19,14 +35,15 @@ import manage_typetable from './manage_typetable';
     </a-select>
     <a-input-search placeholder="ຄົ້ນຫາ..." class="" size="large" />
     <a-divider type="vertical" />
-    <a-button class="text-black" size="large">
+    <a-button class="text-black" size="large" @click="reloadPage()">
       ລີໂຫຼດ</a-button
     >
-    <a-button class="text-black" size="large">
+    <a-button class="text-black" size="large" @click="Add()">
       ເພີ່ມໝວດໝູ່</a-button
     >
   </a-space>
   <div class="overflow-x-auto px-10">
     <a-table :columns="manage_typetable" class="lg:w-full whitespace-nowrap" />
   </div>
+  <create_managetype :open="isShowModalForm" @cancel="onCancel" />
 </template>

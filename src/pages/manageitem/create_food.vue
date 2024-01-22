@@ -39,7 +39,7 @@ const clearForm = () => {
   <a-drawer
     :open="open"
     @close="onCancel"
-    title="ເພີ່ມຜູ້ໃຊ້"
+    title="ເພີ່ມເມນູອາຫານ"
     cancel-text="ຍົກເລີກ"
     ok-text="ບັນທຶກ"
   >
